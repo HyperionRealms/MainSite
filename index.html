@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Hyperion Realms</title>
+		
+		<meta name="keywords" content="hyperion, realms, games, hyperion realms games, survival, unreal, rpg, pc, console, xbox, playstation, berlin, video games, developers, development, studio">
+		<meta name="description" content="Berlin based game development studio">
+		<meta name="robots" content="index, follow">
+		<meta name="revisit-after" content="7 days">
+		<meta name="author" content="Dashiel Nemeth">
+		<meta name="subject" content="Video game development studio">
+		<meta name="language" content="English">
+		
+		<meta property="og:title" content="Hyperion Realms" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://hyperionrealms.com" />
+		<meta property="og:description" content="Berlin based game development studio" />
+		<meta property="og:site_name" content="Hyperion Realms" />
+		
+		<meta property="og:image" content="https://hyperionrealms.com/images/logo-twotone.jpg" />
+		<meta property="og:image:alt" content="Hyperion Realms Logo" />
+		<meta property="og:image:width" content="2048" />
+		<meta property="og:image:height" content="2048" />
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="128x128" href="images/favicon-128.png">
+		<link rel="icon" type="image/png" sizes="167x167" href="images/favicon-167.png">
+		<link rel="icon" type="image/png" sizes="180x180" href="images/favicon-180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+		<link rel="icon" type="image/png" sizes="196x196" href="images/favicon-196.png">
+		
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+		<!-- Basic Element Styles -->
+		<style>
+		
+			html,table,tr,td{
+				margin:0em;
+				padding:0em;
+			}
+			
+			body,div,img{
+				text-align:center;
+				margin:0em;
+				padding:0em;
+				font-family: 'Rajdhani', sans-serif;
+				font-weight:500;
+				font-size:110%;
+			}
+			
+			body{
+				background-color:#1A1A1A;
+			}
+			
+			h1,h2,h3,h4,h5{
+				font-family: 'Rajdhani', sans-serif;
+				font-weight:700;
+				position:relative;
+			}
+			
+			h1{
+				font-size:3.5em;
+				margin-bottom:0em;
+			}
+			
+			h2{
+				font-weight:400;
+				margin-top:-0.5em;
+				margin-bottom:2em;
+			}
+			
+			p{
+				padding-left:3em;
+				padding-right:3em;
+			}
+			
+			::-webkit-scrollbar{
+				display:none;
+			}
+			
+		</style>
+		
+		<!-- Main Layout Styles -->
+		<style>
+
+			.core{
+				background-color:#FEFEFE;
+				max-width:57em;
+				margin-left:auto;
+				margin-right:auto;
+				height:100%;
+				display:inline-table;
+				width:100%;
+			}
+
+			.hicon{
+				height:10em;
+				position:relative;
+				top:-3.1em;
+				transform:translateY(125%);
+				opacity:0.1;
+				margin-top:-10em;
+				z-index:0;
+				pointer-events:none;
+			}
+			
+			.hicon.front{
+				opacity:1.0;
+				z-index:2;
+				top:-2.25em;
+				left:1.45em;
+			}
+			
+			.hicon.back{
+				opacity:0.5;
+				top:-1.05em;
+				left:1.45em;
+			}
+			
+			.section{
+				position:relative;
+				max-width:870px;
+				margin:10em auto;
+				height:60vh;
+				padding-top:10vh;
+				display:table;
+			}
+			
+			.section li{
+				margin-bottom:1em;
+			}
+			
+			.vcenter{
+				display:table-cell;
+				vertical-align:middle;
+				text-align:center;
+			}
+
+			.shop,.free{
+				display:block;
+				background-color:rgba(255,200,112,0.5);
+				border:0.1em solid #DFA850;
+				border-radius:0.4em;
+				width:15em;
+				padding:0.4em 0.2em;
+				margin:0.8em auto 4em auto;
+				font-family: 'Rajdhani', sans-serif;
+				font-weight:700;
+				text-decoration:none;
+				color:black;
+			}
+			
+			.shop:hover{
+				background-color:rgba(255,200,112,0.6);
+			}
+			
+			.shop span,.free span{
+				position:relative;
+				top:0.05em;
+			}
+			
+			.shop img{
+				height:1em;
+				position:relative;
+				left:0.1em;
+				top:0.3em;
+			}
+			
+			.free{
+				background-color:rgba(200,255,112,0.5);
+				border:0.1em solid #A8DF50;
+			}
+			
+			.free:hover{
+				background-color:rgba(200,255,112,0.6);
+			}
+			
+			body table{
+				width:100%;
+			}
+			
+			.portrait{
+				width:8em;
+				border:1px solid #1A1A1A;
+				margin-top:2em;
+			}
+			
+			.name{
+				font-size:1.2em;
+				font-weight:700
+			}
+			
+			.title{
+				color:#1A1A1A;
+				position:relative;
+				top:-0.3em;
+			}
+			
+			.company{
+				width:1.2em;
+				margin:0.2em 0.2em;
+			}
+			
+			.caption{
+				font-size:0.8em;
+				padding:0em 1.2em;
+				max-width:20em;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			
+			.social{
+				width:3em;
+				height:3em;
+				opacity:0.4em;
+				margin:2em 1em;
+			}
+			
+		</style>
+		
+		<!-- Header Menu Styles -->
+		<style>
+			
+			.header{
+				position:fixed;
+				top:0em;
+				width:100vw;
+				z-index:3;
+				background-color:black;
+				color:#CCC;
+				text-align:left;
+				background-image:url('images/maze-texture.png');
+				background-size:30em;
+				background-position:-12.3em 50.75%;
+				background-repeat:no-repeat;
+			}
+			
+			.logo{
+				height:4em;
+				margin-left:0.4em;
+				margin-top:-0.4em;
+				margin-bottom:-1.0em;
+			}
+			
+			.logo-icon{
+				display:none;
+			}
+			
+			.menu{
+				position:absolute;
+				right:0em;
+				text-transform:uppercase;
+				padding-right:1em;
+			}
+			
+			.menu a{
+				display:inline-block;
+				color:#EEE;
+				text-decoration:none;
+				height:1.75em;
+				padding-top:1.00em;
+				padding-right:1.0em;
+				padding-left:1.0em;
+				font-family: 'Rajdhani', sans-serif;
+				font-weight:700;
+			}
+			
+			.menu a:hover{
+				color:#DDD;
+			}
+			
+			.menu a:active{
+				color:#FFF;
+			}
+			
+		</style>
+		
+		<!-- Narrow Screen Styles -->
+		<style>
+			
+			@media only screen and (max-width: 57em){
+			
+				h1{
+					font-size:6.2vw;
+				}
+				
+				h2{
+					font-size:2.7vw;
+				}
+				
+				.hicon{
+					top:-4.49vw;
+					height:17.7vw;
+				}
+				
+				.hicon.front{
+					height:20vw;
+					top:-3.9vw;
+					left:-15.8vw;
+				}
+				.hicon.back{
+					height:20vw;
+					top:-3.9vw;
+					left:20.8vw;
+				}
+			
+			}
+			
+			@media only screen and (max-width: 50em){
+			
+				.section td{
+					display:block;
+					width:100%;
+				}
+				
+				.gallery{
+					margin-left:auto;
+					margin-right:auto;
+					
+				}
+			
+			}
+			
+			@media only screen and (max-width: 600px){
+				
+				.bullet{
+					display:none;
+				}
+				
+				.header{
+					position:relative;
+					font-size:3em;
+					text-align:center;
+					background-image:url('images/maze-texture.png');
+					background-size:15em;
+					background-position:50% 50%;
+
+				}
+				
+				.header a,.header img{
+					display:block;
+				}
+				
+				.header .logo{
+					display:none;
+				}
+				
+				.logo-icon{
+					display:block;
+					width:4em;
+					margin-left:auto;
+					margin-right:auto;
+					padding-top:0.0em;
+					margin-top:-0.7em;
+					margin-bottom:-0.5em;
+					padding-bottom:0.0em;
+				}
+				
+				.header a{
+					background-color:#333;
+					padding-top:0.60em;
+					padding-bottom:0.0em;
+					border-top:0.05em solid #444;
+					border-bottom:0.05em solid black;
+					text-shadow:0.07em 0.07em black;
+				}
+				
+				.header a:nth-of-type(odd){
+					background-color:#222;
+				}
+				
+				.header a:active{
+					background-color:#666;
+				}
+				
+				.header .menu{
+					position:relative;
+					left:0em;
+				}
+				
+				.first-banner{
+					margin-top:0em;
+				}
+				
+				.credit{
+					display:none;
+				}
+				
+			}
+		
+		</style>
+		
+	</head>
+	<body>
+
+		<!-- Floating Page Header Menu -->
+		<div class="header">
+			<a href="/">
+				<img class="logo" src="images/logo-white-small.png" />
+				<img class="logo-icon" src="images/logo-white-small.png" />
+			</a>
+			<span class="menu">
+				<a href="#company">The Company</a><span class="bullet"> &#8226; </span>
+				<a href="#team">The Team</a><span class="bullet"> &#8226; </span>
+				<a href="#games">Our Games</a>
+			</span>
+		</div>
+			
+		<!-- Main Body Content -->
+		<div class="core">
+			
+			<!-- Company -->
+			<a name="company"></a>
+			<div class="section"><div class="vcenter">
+				<img src="images/logo-black-solo.png" class="hicon" />
+				<h1>HYPERION REALMS</h1>
+				<h2>The Real World Is Boring, Let's Go Somewhere Else</h2>
+				<p>At Hyperion Realms we're crafting the next generation of open world survival games for PC and consoles, with a keen focus on richly detailed, deeply open-ended, and rewardingly creative player experiences.</p>
+				<p>We believe that by giving players the freedom to make real choices, the tools to express themselves creatively, deep worlds to explore and discover, and the opportunity to make a true impact on their world and community, we can deliver experiences our players never realized they always wanted.</p>
+				<br>
+				<p><b>Have a question about our team or our games?</b></p>
+				<a class="free" href="mailto:info@hyperionrealms.com"><span>CONTACT US</span></a>
+			</div></div>
+			
+			<!-- Team -->
+			<a name="team"></a>
+			<div class="section">
+				<h1>DEVELOPMENT TEAM</h1>
+				<h2>A New Kind of Team for Modern Development</h2>
+				<p>Hyperion Realms is based in Berlin, Germany, but our team is fully remote, giving us access to the best talent in the industry, no matter where they live.</p>
+				<p>With founders hailing from the United States, Iceland, and Italy, and team members from around the world, our organization is truly international, but we keep our focus tight with a small, efficient team of only the best veteran talent, enabling us to deliver far more than a team our size should be able to.</p>
+				
+				<table><tr>
+					<td>
+						<img class="portrait" src="images/dash.jpg" />
+						<div class="name">Dashiel Nemeth</div>
+						<div class="title">Founder</div>
+						<div>
+							<img class="company" src="images/company-ea.png" />
+							<img class="company" src="images/company-scopely.png" />
+							<img class="company" src="images/company-wargaming.png" />
+						</div>
+						<div class="caption">Game designer and product manager with 17 years experience in game development, product vision, and project leadership</div>
+					</td>
+					<td>
+						<img class="portrait" src="images/siggi.jpg" />
+						<div class="name">Sigurður Gunnarsson</div>
+						<div class="title">Founder</div>
+						<div>
+							<img class="company" src="images/company-ccp.png" />
+							<img class="company" src="images/company-klang.png" />
+							<img class="company" src="images/company-wargaming.png" />
+						</div>
+						<div class="caption">Engineer and technical leader with over 20 years experience building prototypes and at-scale solutions both in and out of games</div>
+					</td>
+					<td>
+						<img class="portrait" src="images/raffa.jpg" />
+						<div class="name">Rafael Martinez</div>
+						<div class="title">Founder</div>
+						<div>
+							<img class="company" src="images/company-dneg.png" />
+							<img class="company" src="images/company-hoplon.png" />
+							<img class="company" src="images/company-wargaming.png" />
+						</div>
+						<div class="caption">Expert in procedural generation, technical art, and 3D, with 17 years experience in games, feature films, and advertisement</div>
+					</td>
+				</tr></table>
+			</div>
+
+			<!-- Games -->
+			<a name="games"></a>
+			<div class="section">
+				<img src="images/game-logo-back.png" class="hicon back" />
+				<img src="images/game-logo-front.png" class="hicon front" />
+				<h1>OUR PROJECT</h1>
+				<h2>Survival Games Are Ripe for Fresh Innovation</h2>
+				<p>We see a golden opportunity to take survival games to the next level of fun and player engagement, and we're eager to share more about our first project. Watch this space or follow us on social media for all the details as they're ready to share.</p>
+				<a href="https://www.facebook.com/Hyperion-Realms-106086465041943"><img src="images/facebook.png" class="social" /></a>
+				<a href="https://twitter.com/HyperionRealms"><img src="images/twitter.png" class="social" /></a>
+			</div>
+			
+		</div>
+
+	</body>
+</html>
