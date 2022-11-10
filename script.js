@@ -4,6 +4,12 @@ function start(){
 	for( var i = 0; i < heads.length; i++ )
 		heads[i].onclick = fold;
 	
+	if( window.location.hash ){
+		var target = document.querySelector( ".folder[link=" + window.location.hash.replace( "#","" ) + "]" );
+		if( target )
+			target.click();
+	}
+	
 }
 
 function fold(){
