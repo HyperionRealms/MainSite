@@ -6,8 +6,9 @@ function start(){
 	
 	if( window.location.hash ){
 		var target = document.querySelector( ".folder[link=" + window.location.hash.replace( "#","" ) + "]" );
-		if( target )
-			target.click();
+		if( target ){
+			window.setTimeout( function(){ target.click(); }, 100);
+		}
 	}
 	
 }
@@ -19,6 +20,9 @@ function fold(){
 		if( descs[i] == this.nextSibling.nextSibling && !descs[i].className.match( / show/ ) ){
 			descs[i].className += " show";
 			location.hash = "#" + this.getAttribute( "link" );
+			/*
+			*/
+			this.scrollIntoView(true);
 			window.scrollBy(0,-75);
 		}
 		else
