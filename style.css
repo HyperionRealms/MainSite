@@ -1,0 +1,443 @@
+/* Basic Elements */
+
+html,body{
+	height:100%;
+	position:relative;
+}
+
+html,table,tr,td{
+	margin:0em;
+	padding:0em;
+}
+
+table{
+	max-width:34em;
+	margin:0em auto;
+}
+
+body,div,img{
+	text-align:center;
+	margin:0em;
+	padding:0em;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight:500;
+	font-size:110%;
+}
+
+body{
+	background-color:#1A1A1A;
+}
+
+h1,h2,h3,h4,h5{
+	font-family: 'Rajdhani', sans-serif;
+	font-weight:700;
+	position:relative;
+}
+
+h1{
+	font-size:3.5em;
+	margin-bottom:0em;
+}
+
+h2{
+	font-weight:400;
+	margin-top:-0.5em;
+	margin-bottom:2em;
+}
+
+p{
+	padding-left:3em;
+	padding-right:3em;
+}
+
+::-webkit-scrollbar{
+	display:none;
+}
+
+/* Main Layouts */
+
+.core{
+	background-color:#FEFEFE;
+	max-width:57em;
+	margin-left:auto;
+	margin-right:auto;
+	height:100%;
+	display:inline-table;
+	width:100%;
+}
+
+.hicon{
+	height:10em;
+	position:relative;
+	top:-3.1em;
+	transform:translateY(125%);
+	opacity:0.1;
+	margin-top:-10em;
+	z-index:0;
+	pointer-events:none;
+}
+
+.hicon.front{
+	opacity:1.0;
+	z-index:2;
+	top:-2.25em;
+	left:1.45em;
+}
+
+.hicon.back{
+	opacity:0.5;
+	top:-1.05em;
+	left:1.45em;
+}
+
+.section{
+	position:relative;
+	max-width:870px;
+	margin:10em auto;
+	height:60vh;
+	padding-top:10vh;
+	display:table;
+	width:100%;
+}
+
+.section li{
+	margin-bottom:1em;
+}
+
+.vcenter{
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	width:100%;
+}
+
+.shop,.free{
+	display:block;
+	background-color:rgba(255,200,112,0.5);
+	border:0.1em solid #DFA850;
+	border-radius:0.4em;
+	width:15em;
+	padding:0.4em 0.2em;
+	margin:0.8em auto 4em auto;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight:700;
+	text-decoration:none;
+	color:black;
+}
+
+.shop:hover{
+	background-color:rgba(255,200,112,0.6);
+}
+
+.shop span,.free span{
+	position:relative;
+	top:0.05em;
+}
+
+.shop img{
+	height:1em;
+	position:relative;
+	left:0.1em;
+	top:0.3em;
+}
+
+.free{
+	background-color:rgba(200,255,112,0.5);
+	border:0.1em solid #A8DF50;
+}
+
+.free:hover{
+	background-color:rgba(200,255,112,0.6);
+}
+
+body table{
+	width:100%;
+}
+
+.person{
+	font-size:0.8em;
+	display:inline-block;
+	width:11em;
+}
+
+.portrait{
+	width:8em;
+	border:1px solid #1A1A1A;
+	margin-top:2em;
+}
+
+.name{
+	font-size:1.2em;
+	font-weight:700
+}
+
+.title{
+	color:#1A1A1A;
+	position:relative;
+	top:-0.3em;
+}
+
+.company{
+	width:1.2em;
+	margin:0.2em 0.2em;
+}
+
+.caption{
+	font-size:0.8em;
+	padding:0em 1.2em;
+	max-width:20em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.social{
+	width:3em;
+	height:3em;
+	opacity:0.4em;
+	margin:2em 1em;
+}
+
+/* Menu Layout */
+
+.header{
+	position:fixed;
+	top:0em;
+	width:100vw;
+	z-index:3;
+	background-color:black;
+	color:#CCC;
+	text-align:left;
+	background-image:url('images/maze-texture.png');
+	background-size:30em;
+	background-position:-12.3em 50.75%;
+	background-repeat:no-repeat;
+}
+
+.logo{
+	height:4em;
+	margin-left:0.4em;
+	margin-top:-0.4em;
+	margin-bottom:-1.0em;
+}
+
+.logo-icon{
+	display:none;
+}
+
+.menu{
+	position:absolute;
+	right:0em;
+	text-transform:uppercase;
+	padding-right:1em;
+}
+
+.menu a{
+	display:inline-block;
+	color:#EEE;
+	text-decoration:none;
+	height:1.75em;
+	padding-top:1.00em;
+	padding-right:1.0em;
+	padding-left:1.0em;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight:700;
+}
+
+.menu a:hover{
+	color:#DDD;
+}
+
+.menu a:active{
+	color:#FFF;
+}
+
+/* Responsive Layout */
+
+@media only screen and (max-width: 57em){
+
+	h1{
+		font-size:6.2vw;
+	}
+	
+	h2{
+		font-size:2.7vw;
+	}
+	
+	.hicon{
+		top:-4.49vw;
+		height:17.7vw;
+	}
+	
+	.hicon.front{
+		height:20vw;
+		top:-3.9vw;
+		left:-15.8vw;
+	}
+	.hicon.back{
+		height:20vw;
+		top:-3.9vw;
+		left:20.8vw;
+	}
+
+}
+
+@media only screen and (max-width: 50em){
+
+	.section td{
+		display:block;
+		width:100%;
+	}
+	
+	.gallery{
+		margin-left:auto;
+		margin-right:auto;
+		
+	}
+
+}
+
+@media only screen and (max-width: 600px){
+	
+	.bullet{
+		display:none;
+	}
+	
+	.header{
+		position:relative;
+		font-size:3em;
+		text-align:center;
+		background-image:url('images/maze-texture.png');
+		background-size:15em;
+		background-position:50% 50%;
+
+	}
+	
+	.header a,.header img{
+		display:block;
+	}
+	
+	.header .logo{
+		display:none;
+	}
+	
+	.logo-icon{
+		display:block;
+		width:4em;
+		margin-left:auto;
+		margin-right:auto;
+		padding-top:0.0em;
+		margin-top:-0.7em;
+		margin-bottom:-0.5em;
+		padding-bottom:0.0em;
+	}
+	
+	.header a{
+		background-color:#333;
+		padding-top:0.60em;
+		padding-bottom:0.0em;
+		border-top:0.05em solid #444;
+		border-bottom:0.05em solid black;
+		text-shadow:0.07em 0.07em black;
+	}
+	
+	.header a:nth-of-type(odd){
+		background-color:#222;
+	}
+	
+	.header a:active{
+		background-color:#666;
+	}
+	
+	.header .menu{
+		position:relative;
+		left:0em;
+	}
+	
+	.first-banner{
+		margin-top:0em;
+	}
+	
+	.credit{
+		display:none;
+	}
+	
+}
+
+/* Jobs Layouts */
+
+.jobs{
+	box-sizing:border-box;
+	padding-top:7em;
+	height:100%;
+}
+
+.job,.news{
+	margin-top:0em;
+	height:auto;
+	margin-bottom:1em;
+	padding-top:0em;
+}
+
+.job h3,.news h3{
+	font-size:1.8em;
+	margin-bottom:-0.2em;
+	margin-top:0em;
+}
+
+.job-head,.news-head{
+	width:100%;
+	cursor:pointer;
+	border-bottom:1px solid rgba(0,0,0,0.05);
+	border-top:1px solid rgba(0,0,0,0.05);
+	padding:0.2em 0.0em;
+	background-image:url('images/grad-05.png');
+	background-size:75em;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	color:#333333;
+	transition:border-color 0.25s, background-size 0.25s, background-image 0.25s, color 0.25s;
+}
+.job-head:hover,.news-head:hover{
+	color:#000000;
+	border-color:rgba(0,0,0,0.2);
+	background-image:url('images/grad-10.png');
+	background-size:80em;
+}
+
+
+.job-subhead,.news-subhead{
+	font-size:1em;
+	color:#888888;
+}
+
+.job-desc,.news-desc{
+	text-align:left;
+	display:none;
+	padding-left:1em;
+	padding-right:1em;
+}
+
+.job-desc.show,.news-desc.show{
+	display:block;
+}
+
+.job-desc p,.news-desc p{
+	padding-left:1.0em;
+	padding-right:1.0em;
+	font-size:0.9em;
+}
+.job-desc ul,.news-desc ul{
+	padding-left:2em;
+	padding-right:2em;
+	font-size:0.9em;
+}
+
+.job-desc li,.news-desc li{
+	margin:0em 0em 0.2em 0em;
+}
+
+.job-desc .free,.news-desc .free{
+	text-align:center;
+	margin-top:2em;
+}
+
